@@ -1,0 +1,60 @@
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #5099FF;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    width: 150px; 
+    height: 150px; 
+    margin-bottom: 1rem;
+}
+header p {
+    color: #FFEC61;
+}
+
+p {
+    font-size: 1rem;
+}
+
+section {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h2 {
+    color: #FF7A50;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 1rem;
+}
+
+li {
+    font-size: 1rem; 
+}
+footer {
+    background-color: #5099FF;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
