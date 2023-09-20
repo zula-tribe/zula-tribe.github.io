@@ -85,8 +85,8 @@ body {
     /* .header-action, .header-menu for medium screens and above */
     .header-action,
     .header-menu {
-        right: 10rem;
-        width: 20rem;
+        right: 5rem;
+        width: 15rem;
     }
 }
 
