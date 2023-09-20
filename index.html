@@ -5,13 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zula - Enhancing Diversity in Children's Literature</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+     
     <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-    <header>
-        <img src="./zula.png" alt="Zula Logo" id="logo">
-        <p>Enhancing Diversity and Inclusion in Children's Libraries</p>
+    <header class="header">
+        <nav class="header-navbar">
+            <div class="header-navbar-container">
+          
+                <a class="header-brand navbar-brand" href="/">
+                    <img src="zula.png" alt="Zula logo" id="logo">
+                </a>
+
+                <div class="header-toggler" id="menuButton">
+                    <i class="fas fa-bars"></i> 
+                </div>
+            </div>
+        </nav>
+
+        <ul class="header-menu" id="menu" style="display: none;">
+        </ul>
     </header>
 
     <section id="about">
@@ -94,6 +110,8 @@
         <p>&copy; 2023 Zula - All rights reserved</p>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./script.js"></script>
 </body>
 
