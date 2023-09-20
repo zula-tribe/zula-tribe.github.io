@@ -1,9 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.getElementById("menuButton");
     const menu = document.getElementById("menu");
+    const menuIcon = document.querySelector(".header-toggler i");
 
     menuButton.addEventListener("click", function () {
-        menu.style.display = menu.style.display === "block" ? "none" : "block";
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+            menuIcon.classList.remove("fa-times"); 
+            menuIcon.classList.add("fa-bars");
+        } else {
+            menu.style.display = "block";
+            menuIcon.classList.remove("fa-bars"); 
+            menuIcon.classList.add("fa-times"); 
+        }
     });
 
     const sections = [
@@ -33,6 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 event.preventDefault();
                 document.getElementById(section.id).scrollIntoView({ behavior: "smooth" });
                 menu.style.display = "none";
+                menuIcon.classList.remove("fa-times"); 
+                menuIcon.classList.add("fa-bars");
             });
         });
 
