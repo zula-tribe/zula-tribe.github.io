@@ -1,8 +1,11 @@
-body, h1, h2, h3, p {
+body, h1, h2, .h5, p, li, ul {
     margin: 0;
     padding: 0;
 }
 
+.h5{
+  font-weight: bolder;  
+}
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -122,6 +125,12 @@ body {
     .header-button {
         pointer-events: all;
     }
+    .header-navbar-container {
+        max-width: 90%;
+    }
+    section {
+        max-width: 90%;
+    }
 }
 
 /* .header-navbar */
@@ -136,7 +145,7 @@ body {
 }
 
 .header-navbar-container {
-    width: 80%;
+    width: 100%;
     position: relative;
     align-items: center; 
     padding: 1rem;
@@ -233,7 +242,7 @@ p {
 }
 
 section {
-    max-width: 80%;
+    width: 100%;
     margin: 0 auto;
     padding: 1rem;
 }
