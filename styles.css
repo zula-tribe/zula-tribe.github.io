@@ -136,7 +136,7 @@ body, .content {
     bottom: 16%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 80%;
+    max-width: 30rem;
     padding: 20px;
     text-align: center;
 }
@@ -546,13 +546,8 @@ footer {
         flex: 1; 
         max-width: 30%;
       height: 20rem; 
-      max-height: 20rem; 
         margin-right: 5rem;  
         margin-bottom: 0; 
-    }
-    
-    #vision .column p {
-      max-height: 20rem; 
     }
 
     .middle {
