@@ -1,5 +1,5 @@
 /* Reset default styles */
-html, body, h1, .h1, h2, .h2, h5, .h5, h4, p, li, ul {
+html, body, h1, .h1, h2, .h2,  h3, .h3, h5, .h5, h4, p, li, ul {
     margin: 0;
     padding: 0;
     color: #333333;
@@ -50,7 +50,7 @@ body, .content {
 
 .column {
     flex-direction: column;
-    padding: 0;
+    padding: 1rem 0;
 }
 
 .column .values-title, .column .values-text {
@@ -374,8 +374,6 @@ li {
 
 .card h3 {
     margin-top: 0.75rem;
-    font-size: 1.5rem;
-    color: #FF7A50;
 }
 
 .card p {
