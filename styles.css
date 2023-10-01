@@ -1,11 +1,25 @@
 /* Reset default styles */
-html, body, span, p, li, ul {
+html,
+body,
+span,
+p,
+li,
+ul {
     margin: 0;
     padding: 0;
     color: #333333;
     font-family: 'M PLUS Rounded 1c', Arial, sans-serif;
 }
-h1, .h1, h2, .h2, h3, .h3, h5, .h5, h4 {
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h5,
+.h5,
+h4 {
     margin: 0;
     padding: 0;
     color: #5099FF;
@@ -13,21 +27,28 @@ h1, .h1, h2, .h2, h3, .h3, h5, .h5, h4 {
 }
 
 /* Set up global styles */
-html, body {
+html{
+    height: 100vh;
+}
+html,
+body {
     height: 100%;
+    /*     max-height: 100%; */
     margin: 0;
     padding: 0;
+
     line-height: 1.6;
     font-family: 'M PLUS Rounded 1c', Arial, sans-serif;
 }
 
 /* Layout structure */
-body, .content {
+body,
+.content {
     position: relative;
 }
 
 .wrapper {
-    min-height: 100vh;
+    min-height: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -42,7 +63,8 @@ body, .content {
 }
 
 /* Rows and Columns */
-.row, .column {
+.row,
+.column {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -60,12 +82,14 @@ body, .content {
     padding: 1rem 0;
 }
 
-.column .values-title, .column .values-text {
+.column .values-title,
+.column .values-text {
     padding-right: 0;
     margin-bottom: 1rem;
 }
 
-.column h2, .column h4 {
+.column h2,
+.column h4 {
     margin-right: 0;
     margin-bottom: 1rem;
     text-align: left;
@@ -82,11 +106,31 @@ body, .content {
 }
 
 /* Background Styles */
-.background {
+#about {
     background: #FFEC61;
-    height: 100%;
+    height: 100vh;
+    max-height: 100%;
     width: 100%;
-    padding: 2rem 0;
+    padding: 4rem 0 0 0;
+    position: relative;
+}
+
+.about-content {
+    position: relative;
+    text-align: center;
+    height: 100%;
+}
+
+#about .background-div {
+    background-image: url('background.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    object-fit: cover;
+    min-height: fit-content;
+    height: 100%;
+    max-height: 100%;
 }
 
 .background-secondary {
@@ -101,19 +145,8 @@ body, .content {
     background: #5099FF;
 }
 
-.background-primary {
-    background: #FFEC61;
-}
-
 .background-white {
     background: #FFFFFF;
-}
-
-.background-image{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    overflow: hidden;
 }
 
 /* Transition Styles */
@@ -131,21 +164,25 @@ body, .content {
 
 /* Bottom Section */
 .bottom .join-us-text {
-    max-width: 60%;
-    margin: 2.5rem auto;
+    margin: 2rem auto;
+    color: #FF7A50;
 }
 
 /* Foreground */
 .foreground-div {
     position: absolute;
-    top: 5rem;
+    top: 25%;
     left: 50%;
     bottom: 16%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 30rem;
+    max-width: 100%;
     padding: 20px;
     text-align: center;
+}
+
+.foreground-div p, .foreground-div h1 {
+    color: #000000;
 }
 
 /* Header */
@@ -194,7 +231,8 @@ body, .content {
     top: 100%;
 }
 
-.header-action, .header-menu {
+.header-action,
+.header-menu {
     margin: 0;
     position: absolute;
     background-clip: padding-box;
@@ -403,21 +441,31 @@ li {
     border-radius: 50%;
     width: 500px;
     height: 500px;
-    top: 45%;
+    top: 50%;
     left: 10%;
-    transform: translate(-40%, -50%);
+    transform: translate(-50%, 100%);
+}
+
+.round-element-top,
+.round-element-middle,
+.round-element-bottom {
+    position: relative;
+}
+
+.round-element-bottom {
+    position: relative;
 }
 
 .bottom {
-    text-align: center;
-    border-radius: 50%;
-    background-color: #EFEFEF;
-    bottom: 0;
-    width: 500px;
-    height: 500px;
+    border-radius: 50% 50%  0 0;
+    width: 100%;
+    height: 14rem;
+    top: -50%;
     left: 50%;
-    padding: 10%;
-    transform: translate(-50%, 50%);
+    padding: 12%;
+    text-align: center;
+    transform: translate(-50%, -100%);
+    background-color: #EFEFEF;
 }
 
 /* Footer */
@@ -439,12 +487,15 @@ footer {
     flex-direction: column;
 }
 
-.footer-logo, .footer-text, .footer-icons, .impressum {
+.footer-logo,
+.footer-text,
+.footer-icons,
+.impressum {
     margin-top: 1rem;
 }
 
 .footer-logo img {
-    height: 2rem; 
+    height: 2rem;
 }
 
 
@@ -495,9 +546,9 @@ footer {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 1rem; 
+    padding: 1rem;
     cursor: pointer;
-  }
+}
 
 .close:hover,
 .close:focus {
@@ -506,41 +557,54 @@ footer {
     cursor: pointer;
 }
 
-#impressumBtn{
+#impressumBtn {
     color: #FFFFFF;
     text-decoration: none;
 }
+
 @media (min-width: 768px) {
     .header-action {
         opacity: 1;
     }
+
     .header-action,
     .header-menu {
         right: 5rem;
         width: 15rem;
     }
+
     .header-button {
         pointer-events: all;
     }
+
     .header-navbar-container {
         max-width: 90%;
     }
-    .content{
+
+    .content {
         margin: 0 auto;
         padding: 1rem;
         max-width: 70%;
     }
-    .content h2{
+
+    .content .title {
         text-align: left;
     }
-    .background{
-        max-width: 100%;
+
+    #about {
+        padding: 10rem 0 3rem 0;
     }
+
+    #about .background-div {
+        background-size: cover; 
+    }
+
     .transition-div {
-        border-radius: 5rem; 
-        padding: 2rem 5rem;  
+        border-radius: 5rem;
+        padding: 2rem 5rem;
         margin-bottom: 1.75rem;
     }
+
     .card {
         max-width: 45%;
         margin-bottom: 0;
@@ -548,82 +612,99 @@ footer {
         padding: 1.25rem;
         width: 100%;
     }
- 
+
     .header-button {
         pointer-events: all;
     }
+
     .header-brand img {
         height: 3.5rem;
     }
+
     .foreground-div {
-        top: 30%; 
-        transform: translate(-50%, -50%); 
-        max-width: 500px; 
-        padding: 10px;  
+        top: 20%;
+        transform: translate(-50%, -50%);
+        max-width: 500px;
+        padding: 10px;
     }
-   
+
     .column {
         display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+        flex-wrap: wrap;
+        align-items: flex-start;
         justify-content: space-between;
-        flex-direction: row; 
+        flex-direction: row;
         margin-bottom: 1.75rem;
     }
 
-    .column .values-title, .column .values-text {
-        padding-right: 2rem ; 
+    .column .values-title,
+    .column .values-text {
+        padding-right: 2rem;
         margin-bottom: 0;
     }
 
-    .column h2, .column h4 {
-        flex: 1; 
-        margin-right: 1rem; 
+    .column h2,
+    .column h4 {
+        flex: 1;
+        margin-right: 1rem;
         margin-bottom: 0;
         text-align: left;
     }
+
     .column p {
-        flex: 2; 
+        flex: 2;
         text-align: left;
     }
-  
-    #goals{
-        margin-bottom: 20rem; 
+
+    #goals {
+        margin-bottom: 20rem;
     }
-    #vision{
+
+    #vision {
         /* width: 60%; */
         height: 100%;
     }
+
     #vision .column .hero-image {
-        flex: 1; 
+        flex: 1;
         max-width: 30%;
-      height: 20rem; 
-        margin-right: 5rem;  
-        margin-bottom: 0; 
+        height: 20rem;
+        margin-right: 5rem;
+        margin-bottom: 0;
+    }
+
+    .top {
+        width: 500px;
+        height: 500px;
+        top: 5rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .middle {
         width: 500px;
         height: 500px;
-        top: 25rem;
+        top: 30rem;
         left: 10%;
         transform: translate(-50%, -50%);
     }
-    
+
     .bottom {
-        width: 100vw;
-        height: 700px;
-        bottom: 0;
+        border-radius: 50% 50%  0 0;
+        width: 100%;
+        height: 50%;
         top: -50%;
         left: 50%;
-        overflow: hidden;
         padding: 10%;
-        transform: translate( -50%, -40%);
+        transform: translate(-50%, -100%);
+        background-color: #EFEFEF;
     }
+
     .bottom .join-us-text {
-        max-width: 30%;
-        margin: auto;
+      max-width: 30%;
+        margin: 0 auto;
     }
+
     .footer-content {
         justify-content: space-between;
         flex-direction: row;
@@ -632,11 +713,13 @@ footer {
     .footer-icons {
         margin-top: 1rem;
     }
+
     .modal {
         padding-top: 5rem;
     }
+
     .modal-content {
         width: 80%;
-      /*   margin: 3rem auto; */
+        /*   margin: 3rem auto; */
     }
 }
