@@ -1,17 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.getElementById("menuButton");
     const menu = document.getElementById("menu");
-    const menuIcon = document.querySelector(".header-toggler i");
+    const modal = document.getElementById("impressumModal");
+    const impressumBtn = document.getElementById("impressumBtn");
+    const closeModalBtn = document.querySelector(".modal .close");
+
+    impressumBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        modal.style.display = "block";
+    });
+
+    closeModalBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
 
     menuButton.addEventListener("click", function () {
         if (menu.style.display === "block") {
             menu.style.display = "none";
-            menuIcon.classList.remove("fa-times"); 
+            menuIcon.classList.remove("fa-times");
             menuIcon.classList.add("fa-bars");
         } else {
             menu.style.display = "block";
-            menuIcon.classList.remove("fa-bars"); 
-            menuIcon.classList.add("fa-times"); 
+            menuIcon.classList.remove("fa-bars");
+            menuIcon.classList.add("fa-times");
         }
     });
 
@@ -42,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 event.preventDefault();
                 document.getElementById(section.id).scrollIntoView({ behavior: "smooth" });
                 menu.style.display = "none";
-                menuIcon.classList.remove("fa-times"); 
+                menuIcon.classList.remove("fa-times");
                 menuIcon.classList.add("fa-bars");
             });
         });
