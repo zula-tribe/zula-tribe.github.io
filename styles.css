@@ -3,11 +3,13 @@ html, body, span, p, li, ul {
     margin: 0;
     padding: 0;
     color: #333333;
+    font-family: 'M PLUS Rounded 1c', Arial, sans-serif;
 }
-h1, .h1, h2, .h2,  h3, .h3, h5, .h5, h4 {
+h1, .h1, h2, .h2, h3, .h3, h5, .h5, h4 {
     margin: 0;
     padding: 0;
     color: #5099FF;
+    font-family: 'M PLUS Rounded 1c', Arial, sans-serif;
 }
 
 /* Set up global styles */
@@ -15,8 +17,8 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     line-height: 1.6;
+    font-family: 'M PLUS Rounded 1c', Arial, sans-serif;
 }
 
 /* Layout structure */
